@@ -1,0 +1,129 @@
+#sidebar{
+    grid-area: side-bar;
+    min-width: 584px;
+    /* width: 584px; */
+    font-size: 1 rem;
+}
+
+.sidebar-option{
+    background-color: #121212;
+    border-radius: 8px;
+    font-weight: 500;
+    color: #ffffffa2;
+
+}
+#sidebar .sidebar-option img.library-logo{
+  width: 30px;
+}
+.sidebar-option a{
+  text-decoration: none;
+  color: #ffffffa2;
+}
+.btn-trans{
+    background-color: transparent;
+    border: none;
+    color: #ffffffa2;
+  }
+  .btn-trans:hover{
+    background-color:#3f3e3e11 ;
+    border-radius: 20px;
+  }
+  #mainview{
+    grid-area: main-view;
+  }
+  .tag-btn{
+    background-color: #2a2a2a;
+    color:#fff;
+    border: 0;
+    border-radius: 15px;
+    font-size: 0.775rem;
+    font-weight: 500;
+  }
+  .tag-btn:hover{
+    background-color: #3b3b3b;
+  }
+  button.recent span{
+    color: #fff;
+    font-size: 0.775rem;
+    font-weight: 500;
+  }
+  .tab-header span{
+    font-size: 0.7rem;
+    font-weight: 450;
+  }
+  .tab-header{
+    border-bottom:solid 1px #2a2a2a;
+  }
+  .title{
+    color: #fff;
+  }
+  .content{
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+  .liked-song{
+    width: 3rem;
+    border-radius: 4px;
+  }
+  .content-card{
+    text-align: center;
+  }
+  .control-btn{
+    background-color:#2a2a2a ;
+    color: #ffffff98;
+    padding: 9px 13px;
+    border-radius: 50px;
+  }
+  .scroll-bar{
+    overflow-y: scroll;
+    max-height: 555px;
+    min-height: 30vh;
+    scrollbar-width: thin;
+    overscroll-behavior: contain;
+  }
+  .scroll-bar::-webkit-scrollbar{
+    background-color: transparent;
+  }
+  .scroll-bar::-webkit-scrollbar-thumb{
+    background-color: #4444442d;
+    border-radius: 10px;
+  }
+  @media(max-width:1860px)
+{
+  #sidebar{
+    max-width: 400px;
+    min-width: 300px;
+  }
+ .d-flex.justify-content-between.m-2.tab-header.pb-2{
+  display: none!important;
+ }
+ .scroll-bar{
+  margin-top: 8px;
+  max-height: 568px;
+ }
+ span.content.pe-4,span.content.last-played{
+  display: none!important;
+ }
+}
+@media(max-width:1590px){
+  .last{
+    display: none;
+  }
+  .img-holder{
+    justify-content: center;
+  }
+  .scroll-bar{
+    max-height: 568px;
+  }
+  .mainview-content{
+    max-height: 589px;
+  }
+}
+@media(max-width:1400px){
+  .list{
+    grid-template-columns: 50% 50%;
+  }
+  .sub-last{
+    display: none!important;
+  }
+}

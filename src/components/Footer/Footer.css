@@ -1,0 +1,68 @@
+.song-info img{
+    width: 60px;
+    border-radius: 4px;
+}
+#now-playing{
+    grid-area: now-playing;
+}
+.footer-container{
+    background-color: var(--background-press);
+
+}
+.overall{
+    max-width: 600px;
+    background-color: var(--background-elevated-highlight);
+    height: 4px;
+    border-radius: 4px;
+    min-width: 500px;
+}
+.play-progress{
+    max-width: 600px;
+    width: 54%;
+    background-color:var(--text-base) ;
+    height: 4px;
+    border-radius: 4px;
+}
+.volume-level{
+    max-width: 150px;
+    background-color: #fff;
+    height: 4px;
+    border-radius: 4px;
+    min-width: 125px;
+}
+.recent-volume{
+    width: 20%;
+    background-color: #1ed760;
+    height: 4px;
+    border-radius: 4px;
+}
+.song-name .name{
+    font-size: 0.9rem;
+    color: #fff;
+}
+.song-name .artist{
+    font-size: 0.75rem;
+    color:var(--text-subdued);
+}
+.song-info i{
+    color:#fff
+}
+.player-control-buttons i{
+    font-size: 1.5rem;
+    color: var(--essential-subdued);
+}
+.player-control-buttons i.play-button{
+    color: #fff;
+    font-size: 2rem;
+}
+.playback-bar span{
+    font-size: 0.775rem;
+    color: var(--essential-subdued);
+}
+.option-bar i{
+    color: var(--essential-subdued);
+}
+.player-control-buttons button{
+    background-color: transparent;
+    border: none;
+}

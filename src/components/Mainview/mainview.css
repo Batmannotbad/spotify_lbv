@@ -1,0 +1,157 @@
+#mainview{
+    grid-area: main-view;
+  }
+  .install-btn{
+    background-color: #2a2a2a93;
+    color:#fff;
+    border: 0;
+    border-radius: 15px;
+    font-weight: 500;
+}
+.install-btn span{
+    font-size: 0.775rem;
+}
+#mainview header{
+    width: 100%;
+    font-size: 0.775rem;
+}
+
+.mainview-container{
+    background-image: linear-gradient( rgba(128, 120, 192, 0.582) 5%,var(--background-base));
+
+    /* background-color: var(--background-base); */
+    border-radius: 8px;
+    display: flex;
+    /* -ms-flex-direction: column; */
+    flex-direction: column;
+    grid-area: main-view;
+    min-height: 0;
+    overflow: hidden;
+    position: relative;
+    /* width: 100%; */
+
+}
+header i{
+    font-size: 0.75rem;
+}
+.card-container{
+    background-color: hsla(0,0%,100%,.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+.recent-playlist h4{
+    color: #fff;
+    font-size: 1.75rem;
+}
+.cardtitle{
+    color: #fff;
+    font-weight: 600;
+}
+.play-btn{
+    background-color: transparent;
+    border: none;
+    color: transparent;
+}
+.play-btn:hover{
+    background-color: transparent;
+    border: none;
+    color: #1ed760;
+    transform: scale(1.5);
+    transition: transform 0.75s;
+}
+.list{
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    gap: 1rem 1.5rem;
+    width: 95%;
+    right: 0;
+    left: 0;
+}
+.playlist-tiles h4
+{
+    color: #fff;
+    font-size: 1.75rem;
+}
+.playlist-tiles span{
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--text-subdued);
+}
+.mix-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) ;
+}
+
+.img-holder img{
+    width: 136px;
+    height: 136px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 8px;
+}
+.img-holder button{
+    position: absolute;
+    bottom: 4px;
+}
+.card-contents h5{
+    color:#fff
+}
+.card-contents span{
+    color:var(--text-subdued);
+    font-size: 0.75rem;
+}
+.playlist-card-holder:hover{
+  transform: scale(1.1);
+  transition: transform 0.5s;
+    
+}
+.playlist-card-holder{
+    background-color: #181818;
+    border-radius: 8px;
+}
+.mainview-content{
+    overflow-y: scroll;
+    max-height: 790px;
+    min-height: 30vh;
+    overscroll-behavior: contain;
+}
+.mainview-content::-webkit-scrollbar{
+    background-color: transparent;
+  }
+.mainview-content::-webkit-scrollbar-thumb{
+    background-color: #4444442d;
+    border-radius: 10px;
+}
+.avatar{
+    width: 35px;
+}
+.fa-solid{
+    line-height: 1.6;
+}
+.card-left img{
+    width: 80px;
+}
+@media(max-width:1590px){
+    .last{
+      display: none;
+    }
+    
+    .mainview-content{
+      max-height: 765px;
+    }
+  }
+  @media(max-width:1400px){
+    .list{
+      grid-template-columns: 50% 50%;
+    }
+    .sub-last{
+      display: none!important;
+    }
+    
+  }
+  @media (max-width:1000px){
+    .list{
+        display: flex;
+        flex-direction: column;
+    }
+  }
