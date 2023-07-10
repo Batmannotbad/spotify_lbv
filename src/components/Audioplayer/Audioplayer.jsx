@@ -7,52 +7,46 @@ function Audioplayer() {
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const currentSong = songdata[currentSongIndex];
-  const [currentTime, setCurrentTime] = useState('0:00');
-  const [duration, setDuration] = useState('0:00');
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
 
   const handlePlayPauseClick = (play) => {
     setIsPlaying(play);
   };
 
   const handleNext = () => {
-    setCurrentSongIndex((prevIndex) => {
-      if (prevIndex === songdata.length - 1) {
-        return 0;
-      } else {
-        return prevIndex + 1;
-      }
-    });
+    if (currentSongIndex === songdata.length - 1) {
+      setCurrentSongIndex(0);
+    } else {
+      setCurrentSongIndex(currentSongIndex + 1);
+    }
     setIsPlaying(true);
   };
 
   const handlePrev = () => {
-    setCurrentSongIndex((prevIndex) => {
-      if (prevIndex === 0) {
-        return songdata.length - 1;
-      } else {
-        return prevIndex - 1;
-      }
-    });
+    if (currentSongIndex === 0) {
+      setCurrentSongIndex(songdata.length - 1);
+    } else {
+      setCurrentSongIndex(currentSongIndex - 1);
+    }
     setIsPlaying(true);
+  };
+
+  const handleSeek = (seekTime) => {
+    setCurrentTime(seekTime);
+    const audio = document.getElementById('audio-element');
+    audio.currentTime = seekTime;
   };
 
   useEffect(() => {
     const audio = document.getElementById('audio-element');
 
     const updateCurrentTime = () => {
-      const timeInSeconds = audio.currentTime;
-      const minutes = Math.floor(timeInSeconds / 60);
-      const seconds = Math.floor(timeInSeconds % 60);
-      const formattedTime = `${minutes}:${seconds.toString().padStart(2, '0')}`;
-      setCurrentTime(formattedTime);
+      setCurrentTime(audio.currentTime);
     };
 
     const updateDuration = () => {
-      const timeInSeconds = audio.duration;
-      const minutes = Math.floor(timeInSeconds / 60);
-      const seconds = Math.floor(timeInSeconds % 60);
-      const formattedTime = `${minutes}:${seconds.toString().padStart(2, '0')}`;
-      setDuration(formattedTime);
+      setDuration(audio.duration);
     };
 
     audio.addEventListener('timeupdate', updateCurrentTime);
@@ -88,6 +82,7 @@ function Audioplayer() {
         onPlayPauseClick={handlePlayPauseClick}
         currentTime={currentTime}
         duration={duration}
+        onSeek={handleSeek} // Pass the onSeek function
       />
       <audio id="audio-element" src={currentSong.url}></audio>
       <div className="option-bar d-flex align-items-center justify-content-between gap-3 me-2">

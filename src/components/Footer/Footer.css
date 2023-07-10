@@ -81,3 +81,6 @@ input[type="range"] {
     background-color: #fff;
     cursor: pointer;
   }
+  .playback-bar{
+    width: 100%;
+  }
