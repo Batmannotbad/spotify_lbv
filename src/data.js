@@ -733,9 +733,27 @@ export const songdata = [
     },
     {
         "title": "Nổi tiếng",
-        "artist":"Lan Đu Dây",
+        "artist":"En ci ty",
         "url": "/assets/audio/Music6.mp3",
         "image": "https://i.pinimg.com/564x/e9/fc/08/e9fc0880f70f0fee9c6f8551a0fe1336.jpg"
-    }
+    },
+    {
+        "title": "One Right Now",
+        "artist":"Tuấn Cùi x anh xăm trổ",
+        "url": "/assets/audio/Music7.mp3",
+        "image": "https://i.pinimg.com/564x/ca/8e/88/ca8e884c3b327b8a53f37b48ac00ff8a.jpg"
+    },
+    {
+        "title": "Enchanted",
+        "artist":"Taylor Swift",
+        "url": "/assets/audio/Music9.mp3",
+        "image": "https://i.pinimg.com/564x/04/9d/c1/049dc18c46deae8f38100f5b8714c019.jpg"
+    },
+    {
+        "title": "Chúc Mừn",
+        "artist":"anh xăm trổ",
+        "url": "/assets/audio/Music8.mp3",
+        "image": "https://i.pinimg.com/564x/b2/ea/14/b2ea14c506b325a2261d814eb054e841.jpg"
+    },
 
 ]
