@@ -7,14 +7,14 @@ const AudioControls = ({
     onNextClick
 }) => (
     <div className="player-control d-flex flex-column align-items-center">
-        <div class="player-control-buttons d-flex gap-4 align-items-center">
+        <div className="player-control-buttons d-flex gap-4 align-items-center">
             <button
                 type="button"
                 className="prev"
                 aria-label="Previous"
                 onClick ={onPrevClick}
                 >
-                    <i class="fa-solid fa-backward-step"></i>
+                    <i className="fa-solid fa-backward-step"></i>
                 </button>
                 {isPlaying? (
                     <button
@@ -22,15 +22,15 @@ const AudioControls = ({
                         onClick={() => onPlayPauseClick(false)}
                         aria-label="Pause"
                         >
-                        <i class="fa-solid fa-circle-pause play-button"></i>
+                        <i className="fa-solid fa-circle-pause play-button"></i>
                         </button>
                 ):(
                     <button
-                        className="pause"
+                        className="play"
                         onClick={() => onPlayPauseClick(true)}
-                        aria-label="Pause"
+                        aria-label="Play"
                         >
-                        <i class="fa-solid fa-circle-play play-button"></i>
+                        <i className="fa-solid fa-circle-play play-button"></i>
                         </button>
                 )}
                 <button
@@ -39,7 +39,7 @@ const AudioControls = ({
                 aria-label="Previous"
                 onClick ={onNextClick}
                 >
-                    <i class="fa-solid fa-forward-step"></i>
+                    <i className="fa-solid fa-forward-step"></i>
                 </button>
 
         </div>

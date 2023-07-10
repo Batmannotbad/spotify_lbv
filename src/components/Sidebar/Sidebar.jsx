@@ -6,21 +6,21 @@ function Sidebar() {
    
   return (
     <div id="sidebar">
-            <nav id="sidebar" class="d-flex justify-content-between flex-column fixed-left flex-shrink-0 bg-black m-2">
-                <div class="wrapper d-flex flex-column gap-2">
-                    <div class="sidebar-option">
-                        <ul class="mb-0 p-4">
-                            <li class="position-relative pl-3 mb-2">
-                            <div class="d-flex align-items-center gap-3">
-                                <i class="fa-solid fa-house "></i>
+            <nav id="sidebar" className="d-flex justify-content-between flex-column fixed-left flex-shrink-0 bg-black m-2">
+                <div className="wrapper d-flex flex-column gap-2">
+                    <div className="sidebar-option">
+                        <ul className="mb-0 p-4">
+                            <li className="position-relative pl-3 mb-2">
+                            <div className="d-flex align-items-center gap-3">
+                                <i className="fa-solid fa-house "></i>
                                 <span>
                                     Home
                                 </span>
                             </div>
                         </li>
                             <li>
-                                <div class="d-flex align-items-center gap-3">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                <div className="d-flex align-items-center gap-3">
+                                    <i className="fa-solid fa-magnifying-glass"></i>
                                     <span>
                                         Search
                                     </span>
@@ -28,22 +28,22 @@ function Sidebar() {
                             </li>
                         </ul>
                     </div>
-                    <div class="sidebar-option library">
+                    <div className="sidebar-option library">
                         <div>
-                            <div class="d-flex justify-content-between p-2">
-                                <div class="p-2">
-                                    <a class="d-flex align-items-center gap-2" href="#">
-                                        <img src="./assets/img/libreria.svg" class="img-fluid library-logo" alt="Icon depicting three vertical books"/>
+                            <div className="d-flex justify-content-between p-2">
+                                <div className="p-2">
+                                    <a className="d-flex align-items-center gap-2" href="#">
+                                        <img src="./assets/img/libreria.svg" className="img-fluid library-logo" alt="Icon depicting three vertical books"/>
                                         <span>Your library</span>
                                     </a>
                                 </div>
-                                <div class="p-2 d-flex gap-2">
-                                    <button class="btn-trans"><i class="fa-solid fa-plus rounded p-2"></i></button>
-                                    <button class="btn-trans"><i class="fa-solid fa-grip rounded p-2"></i></button>
-                                    <button  class="btn-trans"><i class="fa-solid fa-arrow-left-long rounded p-2"></i></button>
+                                <div className="p-2 d-flex gap-2">
+                                    <button className="btn-trans"><i className="fa-solid fa-plus rounded p-2"></i></button>
+                                    <button className="btn-trans"><i className="fa-solid fa-grip rounded p-2"></i></button>
+                                    <button  className="btn-trans"><i className="fa-solid fa-arrow-left-long rounded p-2"></i></button>
                                 </div>
                             </div>
-                            <div class="d-flex justify-content-between p-2">
+                            <div className="d-flex justify-content-between p-2">
                                 <div id="tag" class="tag d-flex justify-content-between gap-3">
                                     <button class="tag-btn px-3 py-1">
                                         Playlist
