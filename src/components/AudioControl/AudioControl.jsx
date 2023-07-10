@@ -13,6 +13,11 @@ const AudioControls = ({
     const seekTime = parseFloat(e.target.value);
     onSeek(seekTime);
   };
+  const formatTime = (time) => {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    const formattedTime = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+    return formattedTime;}
 
   return (
     <div className="player-control d-flex flex-column align-items-center">
@@ -53,7 +58,7 @@ const AudioControls = ({
       </div>
       <div className="playback-bar d-flex align-items-center justify-content-between gap-3">
         <span className="time" id="current-time">
-          {currentTime}
+          {formatTime(currentTime)}
         </span>
         <input
           type="range"
@@ -64,7 +69,7 @@ const AudioControls = ({
           onMouseUp={handleSeek} // Added to seek audio on mouse release
         />
         <span className="time" id="duration">
-          {duration}
+          {formatTime(duration)}
         </span>
       </div>
     </div>

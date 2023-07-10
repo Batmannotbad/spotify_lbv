@@ -57,12 +57,15 @@ function Audioplayer() {
     } else {
       audio.pause();
     }
+    if (audio.currentTime === audio.duration) {
+      handleNext();
+    }
 
     return () => {
       audio.removeEventListener('timeupdate', updateCurrentTime);
       audio.removeEventListener('loadedmetadata', updateDuration);
     };
-  }, [isPlaying, currentSongIndex]);
+  }, [isPlaying, currentSongIndex,currentSong]);
 
   return (
     <div className="footer-container d-flex justify-content-between align-items-center p-2 px-3">
@@ -82,7 +85,7 @@ function Audioplayer() {
         onPlayPauseClick={handlePlayPauseClick}
         currentTime={currentTime}
         duration={duration}
-        onSeek={handleSeek} // Pass the onSeek function
+        onSeek={handleSeek} 
       />
       <audio id="audio-element" src={currentSong.url}></audio>
       <div className="option-bar d-flex align-items-center justify-content-between gap-3 me-2">
