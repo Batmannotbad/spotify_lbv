@@ -8,20 +8,25 @@ function Audioplayer() {
   const [isPlaying, setIsPlaying] = useState(false);
   const currentSong = songdata[currentSongIndex];
 
+ 
   const handlePlayPauseClick = (play) => {
     setIsPlaying(play);
+  };
+  
+  useEffect(() => {
     const audio = document.getElementById('audio-element');
-    if (play) {
+    console.log('audio object:', audio);
+    console.log('audio readyState:', audio.readyState);
+  
+    if (isPlaying) {
       audio.play();
-      // setIsPlaying(true)
-      console.log(isPlaying)
+      console.log(isPlaying);
     } else {
       audio.pause();
-      // setIsPlaying(false)
-      console.log(isPlaying)
+      console.log(isPlaying);
     }
-    console.log(currentSong)
-  };
+  }, [isPlaying]);
+  
   const handleNext = () => {
     if (currentSongIndex === songdata.length - 1) {
       setCurrentSongIndex(0);
@@ -33,15 +38,6 @@ function Audioplayer() {
     }
     
   };
-  // useEffect(() =>{
-  //   if(isPlaying){
-  //     setIsPlaying(false);
-  //     setTimeout(()=>{
-  //       setIsPlaying(true);
-  //     },50)
-  //   }
-  // },[currentSongIndex])
-
   const handlePrev = () => {
     if (currentSongIndex === 0) {
       setCurrentSongIndex(songdata.length - 1);
