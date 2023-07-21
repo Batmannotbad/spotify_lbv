@@ -126,6 +126,7 @@ header i{
     width: 35px;
     height: 35px;
     object-fit: cover;
+    border: solid 3px rgb(32, 32, 32);
 }
 .fa-solid{
     line-height: 1.6;

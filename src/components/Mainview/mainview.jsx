@@ -79,7 +79,7 @@ function Mainview() {
               <span> Install App</span>
             </button>
             <span>{user.fullname}</span>
-            <div className="avatar-img" onClick={handleLogout}>
+            <div className="avatar-img" title='Logout' onClick={handleLogout}>
               <img src={user.img}className="avatar bg-info rounded-circle" alt="avt" />
             </div>
           </div>

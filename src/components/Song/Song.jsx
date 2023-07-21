@@ -1,6 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import './Song.css'
+import Audioplayer from '../Audioplayer/Audioplayer';
 
 const Song = () => {
   const currentSong = useSelector((state) => state.song.currentSong);
@@ -12,13 +14,10 @@ const Song = () => {
 
   return (
     <div>
-      <div className='text-white'>Song Details:</div>
-      <div className='text-white'>Title: {currentSong.title}</div>
-      <div className='text-white'>Artist: {currentSong.Artists}</div>
-      <img className='song img' src={currentSong.Img} alt={currentSong.title}></img>
-      <audio controls>
-        <source src={currentSong.Src} type='audio/mpeg'></source>
-      </audio>
+    <div className='song-detail' style={{ backgroundImage:`url(${currentSong.Img})` }}></div>
+    <div className='song-player'>
+        <Audioplayer/>
+    </div>
     </div>
   );
 };

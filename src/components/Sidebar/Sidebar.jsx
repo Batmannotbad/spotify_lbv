@@ -73,7 +73,7 @@ function Sidebar() {
                                 </div>
                                 <div className="p-2 d-flex gap-2">
                                     <Link to='/addsong'>
-                                    <button className="btn-trans"><i className="fa-solid fa-plus rounded p-2"></i></button></Link>
+                                    <button className="btn-trans"><i className="fa-solid fa-plus rounded p-2" title='Add song'></i></button></Link>
                                     <button className="btn-trans"><i className="fa-solid fa-grip rounded p-2"></i></button>
                                     <button  className="btn-trans"><i className="fa-solid fa-arrow-left-long rounded p-2"></i></button>
                                 </div>
@@ -128,6 +128,7 @@ function Sidebar() {
                                             <tr 
                                                 key={song._id}
                                                 className='content-card'
+                                                title={song.title}
                                                 onClick={() => {
                                                     handleSongClick(song);
                                                 }}>

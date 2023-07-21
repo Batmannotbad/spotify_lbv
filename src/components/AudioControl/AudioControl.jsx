@@ -27,6 +27,7 @@ const AudioControls = ({
           className="prev"
           aria-label="Previous"
           onClick={onPrevClick}
+          title="Previous Song"
         >
           <i className="fa-solid fa-backward-step"></i>
         </button>
@@ -35,6 +36,7 @@ const AudioControls = ({
             className="pause"
             onClick={() => onPlayPauseClick(false)}
             aria-label="Pause"
+            title="Pause"
           >
             <i className="fa-solid fa-circle-pause play-button"></i>
           </button>
@@ -43,6 +45,7 @@ const AudioControls = ({
             className="play"
             onClick={() => onPlayPauseClick(true)}
             aria-label="Play"
+            title="Play"
           >
             <i className="fa-solid fa-circle-play play-button"></i>
           </button>
@@ -53,6 +56,7 @@ const AudioControls = ({
           className="next"
           aria-label="Next"
           onClick={onNextClick}
+          title="Next Song"
         >
           <i className="fa-solid fa-forward-step"></i>
         </button>
