@@ -16,12 +16,11 @@
     flex-direction: column;
     height: 100%;
     line-height: normal;
-    min-height: 600px;
-    min-width: 800px;
+    
     scrollbar-width: none;
     width: 100%;
     /* overflow-y:hidden; */
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
   }
   a {
     text-decoration: none;

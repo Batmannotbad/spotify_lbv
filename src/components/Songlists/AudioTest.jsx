@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import AudioControls from '../AudioControl/AudioControl';
-import "../Footer/Footer.css";
 import { setCurrentSong } from '../../features/songSlice';
-import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
 
 
-function Audioplayer() {
+
+const AudioTest = () => {
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const allSongs = useSelector((state) => state.song.song);
@@ -15,6 +14,7 @@ function Audioplayer() {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const dispatch = useDispatch();
+  const [volume, setVolume] = useState(0.5);
 
   
 
@@ -107,6 +107,14 @@ function Audioplayer() {
       };
     }
   }, [isPlaying, currentSongIndex, allSongs]);
+  const handleVolumeChange = (newVolume) => {
+    setVolume(newVolume);
+    const audio = document.getElementById('audio-element');
+    if (audio) {
+      audio.volume = newVolume;
+    }
+  };
+
 
   return (
     <div className="footer-container d-flex justify-content-between align-items-center p-2 px-3">
@@ -136,10 +144,8 @@ function Audioplayer() {
             <i className="fa-solid fa-bars"></i>
             <i className="fa-solid fa-laptop-file"></i>
             <i className="fa-solid fa-volume-low"></i>
-            
-            <Link to={`/song/${storedSong._id}`}>
+           
             <i className="fa-solid fa-up-right-and-down-left-from-center"></i>
-            </Link>
           </div>
         </>
       )}
@@ -147,6 +153,4 @@ function Audioplayer() {
   );
 }
 
-export default Audioplayer;
-
-
+export default AudioTest

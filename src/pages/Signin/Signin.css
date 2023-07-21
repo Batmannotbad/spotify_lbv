@@ -1,0 +1,66 @@
+.login{
+    background-image: linear-gradient(#202020,#000);
+}
+.container-login{
+    background-color: #000
+}
+.page-title{
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.media-btn{
+    background-color: transparent;
+    color: #fff;
+    font-weight: 600;
+    border: solid 1px #fff;
+    border-radius: 30px;
+}
+.media-btn img{
+    width: 25px;
+    height: 25px;
+}
+.media-options{
+    border-bottom: solid 0.7px #fff;
+}
+.input-title{
+    color: #fff;
+    font-weight: 600;
+    padding: 0.5rem 0;
+}
+input.user-input{
+    background-color: #121212;
+    padding: 1rem;
+    border-radius: 4px;
+    border: none;
+}
+input.user-input:focus-visible{
+    color: #fff;
+    border: solid 1px #fff;
+}
+
+.submit-btn{
+    background-color:#1ed769 ;
+    border: none;
+    border-radius: 30px;
+    padding: 0.7rem;
+    width: 80%;
+    font-weight: 700;
+}
+.submit-btn:hover{
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+.other-options a{
+    color: #fff;
+}
+.other-options span{
+    color: #ffffff96;
+}
+@media (min-width:576px){
+    .container-login{
+        width: 576px; 
+        padding: 5rem!important;
+        border-radius: 10px;
+    }
+}

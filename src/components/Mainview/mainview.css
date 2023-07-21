@@ -124,6 +124,8 @@ header i{
 }
 .avatar{
     width: 35px;
+    height: 35px;
+    object-fit: cover;
 }
 .fa-solid{
     line-height: 1.6;

@@ -2,10 +2,20 @@ import React, { useEffect, useState } from 'react';
 import './mainview.css';
 import { list } from '../../data';
 import { mixlists } from '../../data';
+import { useDispatch, useSelector } from 'react-redux';
+import { logout } from '../../features/userSlice';
+import { clearSongData } from '../../features/songSlice';
 
 function Mainview() {
+  const user = useSelector(state => state.user.user);
   const [randomItems, setRandomItems] = useState([]);
   const [randomMixlists, setRandomMixlists] = useState([]);
+  const dispatch = useDispatch();
+  const handleLogout = () => {
+    dispatch(logout());
+    dispatch(clearSongData());
+    localStorage.removeItem('userInfo');
+  };
 
   useEffect(() => {
     generateRandomItems();
@@ -31,7 +41,6 @@ function Mainview() {
         const randomIndex = Math.floor(Math.random() * item.content.length);
         const selectedContent = item.content[randomIndex];
         if (!selectedContents.includes(selectedContent)) {
-          // Randomly pick 2 artists for the selected content item
           const selectedArtists = [];
           while (selectedArtists.length < 2) {
             const randomArtistIndex = Math.floor(Math.random() * selectedContent.artists.length);
@@ -67,10 +76,11 @@ function Mainview() {
           <div className="d-flex gap-3 align align-items-baseline me-2">
             <button className="install-btn d-flex align-items-center gap-2 p-2">
               <i className="fa-regular fa-circle-down fa-2xs pt-1"></i>
-              <span>Install App</span>
+              <span> Install App</span>
             </button>
-            <div className="avatar-img">
-              <img src="./assets/img/avatar.jpg" className="avatar bg-info rounded-circle" alt="avt" />
+            <span>{user.fullname}</span>
+            <div className="avatar-img" onClick={handleLogout}>
+              <img src={user.img}className="avatar bg-info rounded-circle" alt="avt" />
             </div>
           </div>
         </header>

@@ -1,0 +1,46 @@
+.text-white{
+    color: #fff;
+}
+.add-song{
+    height: 100vh;
+    background-image: linear-gradient(rgb(34, 32, 32),rgb(0, 0, 0));
+}
+.text-weight{
+    font-weight: 600;
+}
+input[type=file]::file-selector-button {
+    margin-right: 20px;
+    border: none;
+    background: #1ed769;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #000000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+  }
+  input{
+    background-color: #121212;
+    color: #fff;
+  }
+  input[type=file]{
+    background-color: transparent;
+  }
+  .song-input{
+    border: none;
+    border-radius: 8px;
+    padding-left: 20px!important;
+  }
+  .add-song-btn{
+    background-color: #1ed769;
+    border: none;
+    width: 70%;
+    border-radius: 1rem;
+    font-weight: 600;
+  }
+  .form-content{
+    background-color: #000000;
+    border-radius: 10px;
+  }
+  
+  

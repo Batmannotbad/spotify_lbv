@@ -8,6 +8,7 @@
     padding: 8px;
     position: relative;
     width: 100%;
+    overflow-y: hidden;
 }
 @media(max-width:1860px)
 {

@@ -60,13 +60,23 @@
   .content{
     font-size: 0.8rem;
     font-weight: 400;
+    color: #ffffffa2;
   }
   .liked-song{
     width: 3rem;
     border-radius: 4px;
   }
-  .content-card{
+  .middle{
+    padding-left: 10rem;
+  }
+  /* .content-card{
     text-align: center;
+  } */
+  tr{
+    border: none;
+  }
+  .table>:not(caption)>*>* {
+    border: none;
   }
   .control-btn{
     background-color:#2a2a2a ;
@@ -105,6 +115,11 @@
   display: none!important;
  }
 }
+.content-card img{
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+}
 @media(max-width:1590px){
   .last{
     display: none;
@@ -118,6 +133,9 @@
   .mainview-content{
     max-height: 589px;
   }
+  .side-info{
+    display: none!important
+  };
 }
 @media(max-width:1400px){
   .list{
@@ -126,4 +144,5 @@
   .sub-last{
     display: none!important;
   }
+ 
 }

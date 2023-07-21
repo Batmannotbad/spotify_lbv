@@ -47,6 +47,7 @@ const AudioControls = ({
             <i className="fa-solid fa-circle-play play-button"></i>
           </button>
         )}
+        
         <button
           type="button"
           className="next"
